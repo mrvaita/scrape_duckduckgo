@@ -1,7 +1,6 @@
 from datetime import datetime
 import scrapy
 from bs4 import BeautifulSoup
-from scrapy_selenium import SeleniumRequest
 from selenium import webdriver
 import re
 
@@ -14,12 +13,6 @@ browser_options = [
 
 class DuckduckgoSpider(scrapy.Spider):
     name = "duckduckgo"
-    base_url = "https://duckduckgo.com/?q={}"
-    searches = [
-        "mars+real+estate",
-        "spotify+elon+musk",
-        "spotify+elon+edm+musk",
-    ]
 
     def __init__(self, name=None, **kwargs):
         super(DuckduckgoSpider, self).__init__(name, **kwargs)
@@ -34,7 +27,7 @@ class DuckduckgoSpider(scrapy.Spider):
         return driver.page_source.encode("utf-8")
 
     def start_requests(self):
-        base_url = "https://duckduckgo.com/?q={}&t=h_&ia=web"
+        base_url = "https://duckduckgo.com/?q={}"
         searches = [
             "mars+real+estate",
             "spotify+elon+musk",
