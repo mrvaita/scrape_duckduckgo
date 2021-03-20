@@ -1,0 +1,14 @@
+README.md
+setup.py
+project.egg-info/PKG-INFO
+project.egg-info/SOURCES.txt
+project.egg-info/dependency_links.txt
+project.egg-info/entry_points.txt
+project.egg-info/top_level.txt
+scrape_duckduckgo/__init__.py
+scrape_duckduckgo/items.py
+scrape_duckduckgo/middlewares.py
+scrape_duckduckgo/pipelines.py
+scrape_duckduckgo/settings.py
+scrape_duckduckgo/spiders/__init__.py
+scrape_duckduckgo/spiders/duckduckgo_spider.py
